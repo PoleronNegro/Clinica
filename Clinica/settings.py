@@ -41,6 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #Añadido por Matias General
     'Aquiles_Salvo.apps.AquilesSalvoConfig',
+    #Añadido por Oscar Torres
+    'Detalle.apps.DetalleConfig',
+    #Añadido por Oscar Torres
+    'Personas.apps.PersonasConfig',
 ]
 
 MIDDLEWARE = [

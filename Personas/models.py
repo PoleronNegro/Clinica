@@ -5,12 +5,17 @@ from Detalle import models as detalleModelo
 
 #clase creada por matías (persona)
 class Persona(models.Model):
-    run = modesl.CharField(max_length=10, null=false, blank=false)
-    nombre = modesl.CharField(max_length=30, null=false, blank=false)
-    apellido = modesl.CharField(max_length=30, null=false, blank=false)
-    telefono = modesl.CharField(max_length=12, null=false, blank=false)
-    correo = modesl.CharField(max_length=45, null=false, blank=false)
-    direccion = modesl.CharField(max_length=30, null=false, blank=false)
+    #realice una actualizacion de datos Oscar Torres
+    run = models.CharField(max_length=10, null=false, blank=false)
+    nombre = models.CharField(max_length=30, null=false, blank=false)
+    apellido = models.CharField(max_length=30, null=false, blank=false)
+    #columna genero añadida por oscar
+    idgenero = models.ForeignKey(detalleModelo.Genero.idgenero,on_delete = models.CASCADE)
+    telefono = models.IntegerField(null=false, blank=false)
+    correo = models.EmailField(max_length=45, null=false, blank=false)
+    direccion = models.CharField(max_length=30, null=false, blank=false)
+    #columna comuna añadida por oscar
+    idcomuna = models.ForeignKey(detalleModelo.Comuna.idcomuna,on_delete = models.CASCADE)
 
 #clase creada por matías (medico)
 class Medico(models.Model):

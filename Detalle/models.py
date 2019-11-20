@@ -33,5 +33,15 @@ class Prevision (models.Model):
     nombre = models.CharField(max_length=30,null=False,blank=False)
     tipo = models.CharField(max_length=15,null=False,blank=False)
 
+#mopdificado por oscar
 class Horario (models.Model):
     Inicio = models.DateTimeField()
+
+#modificado por oscar
+class Hora_Medica(models.Model):
+    idmedico = models.ForeignKey(modelopersonas.Medico.idmedico,on_delete = models.CASCADE)
+    fecha_hora = models.DateTimeField()
+    idprevision = models.ForeignKey(Prevision,on_delete = models.CASCADE)
+    aprovada = models.IntegerField(min=1,max=1,null=False,blank=False)
+    desc_aprovada = models.CharField(max_length=,null=False)
+    idpersona = models.ForeignKey(modelopersonas.Paciente.idpaciente,on_delete = models.CASCADE)
