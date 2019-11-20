@@ -39,8 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #Añadido por Matias General
-    'Aquiles_Salvo.apps.AquilesSalvoConfig',
     #Añadido por Oscar Torres
     'Detalle.apps.DetalleConfig',
     #Añadido por Oscar Torres
