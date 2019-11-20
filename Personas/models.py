@@ -8,7 +8,7 @@ from Detalle import models as detalleModelo
 #clase creada por matías (persona)
 class Persona(models.Model):
     #realice una actualizacion de datos Oscar Torres
-    run = models.CharField(max_length=10, null=False, blank=False)
+    run = models.CharField(primary_key=True,max_length=10, null=False, blank=False)
     nombre = models.CharField(max_length=30, null=False, blank=False)
     apellido = models.CharField(max_length=30, null=False, blank=False)
     #columna genero añadida por oscar
