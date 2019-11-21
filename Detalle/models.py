@@ -37,6 +37,6 @@ class Horario(models.Model):
 
 #odificado por oscar
 class Estado(models.Model):
-    descripcion = models.CharField(max_length=20,null=False)
+    descripcion = models.TextField(max_length=128,null=False)
 
 
