@@ -19,5 +19,5 @@ from Personas.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login', include('Personas.urls'))
+    path('login/', include('Personas.urls'))
 ]

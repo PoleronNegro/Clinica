@@ -5,4 +5,4 @@ from django.contrib import messages
 
 #modificado por oscar
 def login(request):
-    return render(request,'Personas/templates/Personas/vistas_login.html')
+    return render(request,'personas/Login/vista_login.html')
