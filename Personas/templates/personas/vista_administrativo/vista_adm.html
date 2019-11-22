@@ -1,0 +1,37 @@
+<!---->
+{% extends 'personas/Base.html' %}
+
+{% block titulo %}
+    adm
+{% endblock titulo %}
+{% block body %}
+  
+   <div class="table">
+        <div class="table table-striped" >
+            <div class="card-title" >
+                <h2 class="text-center" > ADM  </h2>
+            </div>
+            <form method="POST">
+                {% csrf_token %}
+                {% for input in form %}
+                <div class="row" >
+                    <div class="col-md-12" >
+                        <div class="form-group" >
+                            <label for="{{ input.id_for_label }}"> {{ input.label }} </label>
+                            {{ input }}
+                            {%% if input.errors %}
+                            {% for error in input.errors %}
+                            <small class="form-text text-muted"  >
+                                {{ error }}
+                                {% endfor %}
+                                {% endif %}
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                {% endfor }
+            </form>
+        </div>
+   </div>
+    
+{% endblock body %}

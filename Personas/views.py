@@ -38,6 +38,12 @@ def  administrativo(request):
     }
     return render(request,'personas/base.html/vista_administracion.html',context)   
 
+#hecho por sebastian
+def Adm(request):
+    form =Doctor.objects.all()
+    context={
+        'form':form
+    }
 
 #Traer genero
 def traerGenero():
