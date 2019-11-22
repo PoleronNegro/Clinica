@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponde
+from django.http import HttpResponse
 from django.contrib import messages
 from . import models
 from . import forms
@@ -15,3 +15,16 @@ def medico(request):
             nuevo.save()
             messages.SUCCES(request,'doctor guardado')
             redirect('inicio')
+
+
+#vistas administrativo creado por osvaldo 
+
+def registrohora(request):
+    return HttpResponse ('Registro de hora')
+
+
+def modificardatospaciente(request, rut_paciente):
+    return HttpResponse ('Modificar datos paciente')
+    
+def mostrarhora (request):
+    return HttpResponse ('Mostrar horas')
