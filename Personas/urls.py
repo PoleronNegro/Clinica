@@ -3,6 +3,10 @@ from django.urls import path,include
 from Personas import views
 
 urlpatterns = [
-    path('vista_login/',views.medico,name='Login'),
-    #path('vista_medicos/',views.medico,name='medico'),
+    #modificado por oscar
+    path('acounts/', include('django.contrib.auth.ulrs')),
+    path('medico/',views.medico,name='inicio'),
+    #paths creados por osvaldo
+    path('mostrarhora/',views.mostrarhora, name='mostrar hora'),
+    path('registrohora/',views.registrohora,name='registrar hora')
 ]
