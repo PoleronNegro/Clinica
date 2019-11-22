@@ -22,8 +22,20 @@ class Persona(models.Model):
 #clase creada por matías (medico)
 class Medico(models.Model):
     run = models.OneToOneField(Persona,on_delete = models.CASCADE)
+    nombre = models.CharField(max_length=30,blank=False,null=False)
+    apellido = models.CharField(max_length=30,blank=False,null=False)
+    generos = (('F','Femenino'),('M','Masculino'))
+    genero = models.CharField(max_length=1,choices=generos)
+    contrasena = models.CharField(max_length=30,blank=False,null=False)
+    correo = models.CharField(max_length=30,blank=False,null=False)
+    direccion = models.CharField(max_length=30,blank=False,null=False)
+    telefono = models.CharField(max_length=30,blank=False,null=False)
+    ciudad = models.CharField(max_length=30,blank=False,null=False)
+    comuna = models.CharField(max_length=30,blank=False,null=False)
+    especialidad = models.CharField(max_length=30,blank=False,null=False)
     idespecialidad = models.ForeignKey(detalleModelo.Especialidad,on_delete = models.CASCADE)
     id_horario = models.ForeignKey(detalleModelo.Horario,on_delete = models.CASCADE)
+
 
 #clase creada por matías (paciente)
 class Paciente(models.Model):

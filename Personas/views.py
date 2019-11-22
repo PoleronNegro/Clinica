@@ -8,10 +8,16 @@ from . import forms
 
 
 def medico(request):
-    form = Medicoforms()
+  form = Doctor()
     if request.method == 'POST':
-        nuevo = Medicoforms(request.POST)
-        if nuevo.is_valid():
-            nuevo.save()
-            messages.SUCCES(request,'doctor guardado')
+        newForm = Doctor(request.POST)
+        if newForm.is_valid():
+            newForm.save()
+            messages.SUCCESS(request,'Datos Guardados con exito')
             redirect('inicio')
+        else:
+            form = newForm    
+    context = {
+        'form':form
+    }
+    return render(request,'personas/base.html/vista_medico/.html',context)

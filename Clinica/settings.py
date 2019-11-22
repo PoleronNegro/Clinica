@@ -1,5 +1,5 @@
 #projecto creado por Matias General y Oscar Torres
-
+# your_password 
 """
 Django settings for Clinica project.
 
@@ -39,9 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #Añadido por Oscar Torres
     'Detalle.apps.DetalleConfig',
-    #Añadido por Oscar Torres
     'Personas.apps.PersonasConfig',
 ]
 

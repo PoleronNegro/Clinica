@@ -7,24 +7,29 @@
 
 {% block body %}
 
-<div class="row block" >
-    <div class="card-title">
-        <h2 class="text-center">Ingrese Dtos </h2>
-    </div>
-</div>
-<form method="POST">
-    {% csrf_token %}
-    {% for input in form %}
-    <div class="row" >
-        <div class="col-md-18" >
-            <div class="form-group" >
-              <label for="{{ input.id_for_label }}">{{ input.label }}</label>
-              {{ input }}
-
-    {% endfor %}         
-            </div>
+<div class="row d-flex justify-content-center" >
+   <div class="col-md-7" >
+      <div class="card-body" >
+        <div class="card-title" >
+            <h2 class="text-center" > Ingrese Datos  </h2>
         </div>
-    </div>
-</form>
+        <form method="POST">
+            {% csrf_token %}
+            {% for input in form %}
+            <div class="row" >
+                <div class="col-md-12" >
+                    <div class="form-group" >
+                        <label for="{{ input.id_for_label }}"> {{ input.label }} </label>
+                        {{ input }}
+                    </div>
+                </div>
+            </div>
+            {% endfor }
+            <button type="button" class="btn btn-primary">Guardar</button>
+        </form>
+      </div>
+   </div>
+</div>
+
 
 {% endblock body %}
