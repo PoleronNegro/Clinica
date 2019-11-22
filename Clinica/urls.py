@@ -20,6 +20,8 @@ from Personas import views as vistasPersonas
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', vistasPersonas.inicio,name='inicio'),
     path('login/', vistasPersonas.login,name='vista_login'),
-    path('vista_medico/', vistasPersonas.vista_medico,name='vista_medico_principal'),
+    path('vista_pacientes/', vistasPersonas.personas,name='vista_pacientes'),
+    path('vista_medico/', vistasPersonas.vista_medico,name='vista_medico'),
 ]
