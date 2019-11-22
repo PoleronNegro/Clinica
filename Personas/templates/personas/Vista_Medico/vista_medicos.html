@@ -1,7 +1,7 @@
-{% extends 'personas/base.html/vista_medico/vista_medico.html' %}
+{% extends 'personas/Base.html' %}
 
 {% block titulo %}
-     medico
+    medico
 {% endblock titulo %}     
 
 
@@ -30,6 +30,22 @@
       </div>
    </div>
 </div>
+<<<<<<< HEAD
 
+=======
+<form method="POST">
+    {% csrf_token %}
+    {% for input in form %}
+    <div class="row" >
+        <div class="col-md-18" >
+            <div class="form-group" >
+              <label for="{{ input.id_for_label }}">{{ input.label }}</label>
+              {{ input }}
+            </div>
+        </div>
+    </div>
+    {% endfor %}  
+</form>
+>>>>>>> 7f5b20bf290e7a1062275089554f48bd2b7e3132
 
 {% endblock body %}

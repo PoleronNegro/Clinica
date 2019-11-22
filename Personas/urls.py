@@ -1,7 +1,12 @@
-from django.contrib import admin
-from django.urls import path, include
+from django.urls import path,include
 from . import views
+
+app_name = 'personas'
+
 urlpatterns = [
-    path('acounts/', include('django.contrib.auth.ulrs')),
-    path('medico/',views.medico,name='inicio')
+    #modificado por oscar
+    path('inicio/', views.inicio,name='inicio'),
+    path('vista_login/', views.login,name='login'),
+    path('vista_pacientes/', views.personas,name='vista_pacientes'),
+    path('vista_medicos/', views.vista_medico,name='vista_medico'),
 ]

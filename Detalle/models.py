@@ -23,7 +23,7 @@ class Provincia(models.Model):
 
 #modificado por oscar
 class Comuna(models.Model):
-    nombre_provincia = models.CharField(max_length=64,null=False,blank=False)
+    nombre_comuna = models.CharField(max_length=64,null=False,blank=False)
     id_provincia = models.ForeignKey(Provincia,on_delete = models.CASCADE)
 
 #modificado por oscar
@@ -38,5 +38,3 @@ class Horario(models.Model):
 #odificado por oscar
 class Estado(models.Model):
     descripcion = models.TextField(max_length=128,null=False)
-
-
