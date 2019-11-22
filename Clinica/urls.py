@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from Personas.urls import path,include 
+from Personas import views as vistasPersonas
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/', include('Personas.urls'))
+    path('login/', vistasPersonas.login,name='vista_login'),
+    path('vista_medico/', vistasPersonas.vista_medico,name='vista_medico_principal'),
 ]
