@@ -1,7 +1,7 @@
 #creado por sebastian alexis 
 
 from django import forms
-from . import models+
+from . import models
 
 class Doctor(forms.modelsForm):
      run = forms.CharField(
@@ -117,7 +117,7 @@ class Doctor(forms.modelsForm):
     )
 
     class Meta:
-        bd =  Medico
+        model =  Medico
         fields =('run',
         'nombre','apellido','genero','contrasena',
         'correo','direccion','telefono','ciudad',

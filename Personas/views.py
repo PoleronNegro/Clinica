@@ -6,7 +6,7 @@ from Detalle.models import Genero
 <<<<<<< HEAD
 
 
-
+#sebastian
 def medico(request):
   form = Doctor()
     if request.method == 'POST':
@@ -39,7 +39,4 @@ def personas(request):
 #modificado por oscar
 def login(request):
     return render(request,'personas/Login/vista_login.html')
-#modificado por oscar
-def vista_medico(request):
-    return render(request,'personas/Vista_Medico/vista_medicos.html')
->>>>>>> 7f5b20bf290e7a1062275089554f48bd2b7e3132
+
