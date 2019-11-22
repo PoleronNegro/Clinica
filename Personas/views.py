@@ -20,8 +20,25 @@ def medico(request):
     context = {
         'form':form
     }
-    return render(request,'personas/base.html/vista_medico/.html',context)
+    return render(request,'personas/base.html/vista_medico.html',context)
 =======
+#hecho por sebastians alexis 
+def  administrativo(request):
+ forms = Paciente()
+    if request.method == 'POST':
+        newForm = Paciente(request.POST)
+        if newForm.is_valid():
+            newForm.save()
+            messages.SUCCESS(request,'Datos Guardados con exito')
+            redirect('inicio')
+        else:
+            form = newForm    
+    context = {
+        'form':forms
+    }
+    return render(request,'personas/base.html/vista_administracion.html',context)   
+
+
 #Traer genero
 def traerGenero():
     generos = Genero.objects.all()

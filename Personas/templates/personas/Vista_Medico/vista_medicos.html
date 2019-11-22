@@ -21,6 +21,13 @@
                     <div class="form-group" >
                         <label for="{{ input.id_for_label }}"> {{ input.label }} </label>
                         {{ input }}
+                        {%% if input.errors %}
+                        {% for error in input.errors %}
+                        <small class="form-text text-muted"  >
+                            {{ error }}
+                            {% endfor %}
+                            {% endif %}
+                        </small>
                     </div>
                 </div>
             </div>

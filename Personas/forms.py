@@ -123,3 +123,21 @@ class Doctor(forms.modelsForm):
         'correo','direccion','telefono','ciudad',
         'comuna','especialidad'
         )
+
+
+     class Paciente(forms.modelsForm):
+           run = forms.CharField(
+        widget=forms.TextInput(
+            attrs ={
+                'class': 'form-control'
+            }
+        ),
+        label='Rut Paciente',
+        required=True,
+        max_length=30
+    )
+    class Meta:
+        model = Paciente
+        fields=('run'
+        )
+        
