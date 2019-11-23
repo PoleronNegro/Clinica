@@ -19,12 +19,12 @@ class Region(models.Model):
 #modificado por oscar
 class Provincia(models.Model):
     nombre_provincia = models.CharField(max_length=64,null=False,blank=False)
-    id_region = models.ForeignKey(Region,on_delete = models.CASCADE)
+    region = models.ForeignKey(Region,on_delete = models.CASCADE)
 
 #modificado por oscar
 class Comuna(models.Model):
-    nombre_provincia = models.CharField(max_length=64,null=False,blank=False)
-    id_provincia = models.ForeignKey(Provincia,on_delete = models.CASCADE)
+    nombre_comuna = models.CharField(max_length=64,null=False,blank=False)
+    provincia = models.ForeignKey(Provincia,on_delete = models.CASCADE)
 
 #modificado por oscar
 class Prevision(models.Model):
@@ -33,10 +33,8 @@ class Prevision(models.Model):
 
 #modificado por oscar
 class Horario(models.Model):
-    Inicio = models.DateTimeField()
+    inicio = models.DateTimeField()
 
 #odificado por oscar
 class Estado(models.Model):
     descripcion = models.TextField(max_length=128,null=False)
-
-

@@ -24,4 +24,5 @@ urlpatterns = [
     path('login/', vistasPersonas.login,name='vista_login'),
     path('vista_pacientes/', vistasPersonas.personas,name='vista_pacientes'),
     path('vista_medico/', vistasPersonas.vista_medico,name='vista_medico'),
+    path('vista_administracion', vistasPersonas.vista_administracion,name='vista_administracion'),
 ]
