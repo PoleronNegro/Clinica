@@ -20,12 +20,9 @@ from Personas import views as vistasPersonas
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-<<<<<<< HEAD
-    path('',include('personas.urls'))
-=======
     path('', vistasPersonas.inicio,name='inicio'),
     path('login/', vistasPersonas.login,name='vista_login'),
     path('vista_pacientes/', vistasPersonas.personas,name='vista_pacientes'),
     path('vista_medico/', vistasPersonas.vista_medico,name='vista_medico'),
->>>>>>> 7f5b20bf290e7a1062275089554f48bd2b7e3132
+    path('vista_administracion', vistasPersonas.vista_administracion,name='vista_administracion'),
 ]

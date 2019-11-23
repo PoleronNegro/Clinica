@@ -5,7 +5,7 @@ from Detalle.models import Genero
 # Create your views here.
 
 #sebastian
-def medico(request):
+def vista_medico(request):
     form = Doctor()
     if request.method == 'POST':
         newForm = Doctor(request.POST)
@@ -21,7 +21,7 @@ def medico(request):
     return render(request,'personas/Vista_Medico/vista_medico.html',context)
 
 #hecho por sebastians alexis 
-def  administrativo(request):
+def  vista_administracion(request):
     forms = Paciente()
     if request.method == 'POST':
         newForm = Paciente(request.POST)
@@ -64,4 +64,3 @@ def login(request):
     return render(request,'personas/Login/vista_login.html')
 
 #creado por osvaldo 
-def informehora
