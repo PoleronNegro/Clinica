@@ -63,3 +63,5 @@ def login(request):
     return render(request,'personas/Login/vista_login.html')
 
 #creado por osvaldo 
+def informehoras(request):
+    context = {'fecha_hora'}

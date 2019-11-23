@@ -3,14 +3,14 @@
 {% extends 'personas/Base.html' %}
 
 {% block titulo %}
-    Pacientes
+    Administrador
 {% endblock titulo %}
 
 {% block body %}
 <div class="container">
     <div class="row col-sm-12 justify-content-center">
         <h1>
-            Bienvenido, Ingrese sus datos y seleccione su tipo de prestacion   
+            Ingrese los datos de usuario   
         </h1>
     </div>
 </div>
@@ -20,28 +20,28 @@
         <div class="form-group col-md-6">
             <br>
             <div class="col">
-                <label for="">Ingrese su RUN:</label>
+                <label for="">Ingrese RUN:</label>
                 <input type="text" class="form-control" placeholder="Ingrese su RUN">
             </div>
             <br>
             <div class="col">
-                <label for="">Ingrese su Nombre:</label>
+                <label for="">Ingrese Nombre:</label>
                 <input type="text" class="form-control" placeholder="Ingrese su Nombre">
             </div>
             <br>
             <div class="col">
-                <label for="">Ingrese su Apellido:</label>
+                <label for="">Ingrese Apellido:</label>
                 <input type="text" class="form-control" placeholder="Ingrese su Apellido">
             </div>
             <br>
             <div class="col">
-                <label for="">Ingrese su Email:</label>
+                <label for="">Ingrese Email:</label>
                 <input type="email" class="form-control" id="colFormLabel" placeholder="Ingrese su Email aqui">
             </div>
             <br>
             <div class="col">
                 <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-                <label for="">Seleccione su Genero: </label>
+                <label for="">Seleccione Genero: </label>
                 <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                     {% for ge in genero %}
                     <option value="{{ ge.id }}">{{ ge.detalle }}</option>
@@ -50,27 +50,27 @@
             </div>
             <br>
             <div class="col">
-                <label for="">Ingrese su Direccion:</label>
+                <label for="">Ingrese Direccion:</label>
                 <input type="text" class="form-control" id="colFormLabel" placeholder="Ingrese su Direccion aqui">
             </div>
             <br>            
             <div class="col">
                 <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-                <label for="">Seleccione su Comuna: </label>
+                <label for="">Seleccione Comuna: </label>
                 <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                     {% for ce in comuna %}
                     <option value="{{ ge.id }}">{{ ce.detalle }}</option>
                     {% endfor %}
                 </select>
                 <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-                <label for="">Seleccione su provincia: </label>
+                <label for="">Seleccione provincia: </label>
                 <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                     {% for po in provincia %}
                     <option value="{{ ge.id }}">{{ po.detalle }}</option>
                     {% endfor %}
                 </select>
                 <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
-                <label for="">Seleccione su Region: </label>
+                <label for="">Seleccione Region: </label>
                 <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                     {% for re in region %}
                     <option value="{{ ge.id }}">{{ re.detalle }}</option>
