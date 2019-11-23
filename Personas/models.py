@@ -56,7 +56,7 @@ class administrativo(models.Model):
     run = models.OneToOneField(Persona,on_delete = models.CASCADE)
     nombre = models.CharField(max_length=30,blank=False,null=False)
     apellido = models.CharField(max_length=30,blank=False,null=False)
-    genero = models.CharField(max_length=1,choices=generos)
+    idgenero = models.ForeignKey(detalleModelo.Genero,on_delete = models.CASCADE)
     contrasena = models.CharField(max_length=30,blank=False,null=False)
     correo = models.CharField(max_length=30,blank=False,null=False)
     direccion = models.CharField(max_length=30,blank=False,null=False)
