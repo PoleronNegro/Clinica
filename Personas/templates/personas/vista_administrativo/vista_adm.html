@@ -1,37 +1,87 @@
 <!--sebastians-->
+<!--modidicado -->
 {% extends 'personas/Base.html' %}
 
 {% block titulo %}
-    adm
+    Pacientes
 {% endblock titulo %}
+
 {% block body %}
-  
-   <div class="table">
-        <div class="table table-striped" >
-            <div class="card-title" >
-                <h2 class="text-center" > ADM  </h2>
+<div class="container">
+    <div class="row col-sm-12 justify-content-center">
+        <h1>
+            Bienvenido, Ingrese sus datos y seleccione su tipo de prestacion   
+        </h1>
+    </div>
+</div>
+
+<form>
+    <div class="form row">
+        <div class="form-group col-md-6">
+            <br>
+            <div class="col">
+                <label for="">Ingrese su RUN:</label>
+                <input type="text" class="form-control" placeholder="Ingrese su RUN">
             </div>
-            <form method="POST">
-                {% csrf_token %}
-                {% for input in form %}
-                <div class="row" >
-                    <div class="col-md-12" >
-                        <div class="form-group" >
-                            <label for="{{ input.id_for_label }}"> {{ input.label }} </label>
-                            {{ input }}
-                            {%% if input.errors %}
-                            {% for error in input.errors %}
-                            <small class="form-text text-muted"  >
-                                {{ error }}
-                                {% endfor %}
-                                {% endif %}
-                            </small>
-                        </div>
-                    </div>
-                </div>
-                {% endfor }
-            </form>
+            <br>
+            <div class="col">
+                <label for="">Ingrese su Nombre:</label>
+                <input type="text" class="form-control" placeholder="Ingrese su Nombre">
+            </div>
+            <br>
+            <div class="col">
+                <label for="">Ingrese su Apellido:</label>
+                <input type="text" class="form-control" placeholder="Ingrese su Apellido">
+            </div>
+            <br>
+            <div class="col">
+                <label for="">Ingrese su Email:</label>
+                <input type="email" class="form-control" id="colFormLabel" placeholder="Ingrese su Email aqui">
+            </div>
+            <br>
+            <div class="col">
+                <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                <label for="">Seleccione su Genero: </label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                    {% for ge in genero %}
+                    <option value="{{ ge.id }}">{{ ge.detalle }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <br>
+            <div class="col">
+                <label for="">Ingrese su Direccion:</label>
+                <input type="text" class="form-control" id="colFormLabel" placeholder="Ingrese su Direccion aqui">
+            </div>
+            <br>            
+            <div class="col">
+                <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                <label for="">Seleccione su Comuna: </label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                    {% for ce in comuna %}
+                    <option value="{{ ge.id }}">{{ ce.detalle }}</option>
+                    {% endfor %}
+                </select>
+                <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                <label for="">Seleccione su provincia: </label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                    {% for po in provincia %}
+                    <option value="{{ ge.id }}">{{ po.detalle }}</option>
+                    {% endfor %}
+                </select>
+                <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                <label for="">Seleccione su Region: </label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                    {% for re in region %}
+                    <option value="{{ ge.id }}">{{ re.detalle }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <br>
+            <div class="col">
+                <button type="button" class="btn btn-outline-primary">Ingresar</button>
+            </div>
+            
         </div>
-   </div>
-    
+</form>
 {% endblock body %}
