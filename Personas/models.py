@@ -20,6 +20,7 @@ class Persona(models.Model):
     idcomuna = models.ForeignKey(detalleModelo.Comuna,on_delete = models.CASCADE)
 
 #clase creada por matías (medico)
+#modificada sebastians
 class Medico(models.Model):
     run = models.OneToOneField(Persona,on_delete = models.CASCADE)
     nombre = models.CharField(max_length=30,blank=False,null=False)

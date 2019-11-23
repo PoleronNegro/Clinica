@@ -29,7 +29,7 @@ def  administrativo(request):
         newForm = Paciente(request.POST)
         if newForm.is_valid():
             newForm.save()
-            messages.SUCCESS(request,'Datos Guardados con exito')
+            messages.SUCCESS(request,'')
             redirect('inicio')
         else:
             form = newForm    
@@ -40,10 +40,9 @@ def  administrativo(request):
 
 #hecho por sebastian
 def Adm(request):
-    form =Doctor.objects.all()
-    context={
-        'form':form
-    }
+    Datosdoctor =Doctor.objects.all()
+    return Datosdoctor
+   
 
 #Traer genero
 def traerGenero():
