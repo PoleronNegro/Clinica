@@ -3,12 +3,10 @@ from django.http import HttpResponse
 from django.contrib import messages
 from Detalle.models import Genero
 # Create your views here.
-<<<<<<< HEAD
-
 
 #sebastian
 def medico(request):
-  form = Doctor()
+    form = Doctor()
     if request.method == 'POST':
         newForm = Doctor(request.POST)
         if newForm.is_valid():
@@ -20,11 +18,11 @@ def medico(request):
     context = {
         'form':form
     }
-    return render(request,'personas/base.html/vista_medico.html',context)
-=======
+    return render(request,'personas/Vista_Medico/vista_medico.html',context)
+
 #hecho por sebastians alexis 
 def  administrativo(request):
- forms = Paciente()
+    forms = Paciente()
     if request.method == 'POST':
         newForm = Paciente(request.POST)
         if newForm.is_valid():
@@ -36,7 +34,7 @@ def  administrativo(request):
     context = {
         'form':forms
     }
-    return render(request,'personas/base.html/vista_administracion.html',context)   
+    return render(request,'personas/Vista_Administrativa/vista_administracion.html',context)   
 
 #hecho por sebastian
 def Adm(request):
@@ -52,12 +50,14 @@ def traerGenero():
 #modificado por oscar
 def inicio(request):
     return render(request,'personas/inicio.html')
+
 #modificado por oscar
 def personas(request):
     context = {
         'genero':traerGenero()
     }
     return render(request,'personas/Vista_Paciente/vista_pacientes.html',context) 
+    
 #modificado por oscar
 def login(request):
     return render(request,'personas/Login/vista_login.html')

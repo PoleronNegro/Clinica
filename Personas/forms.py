@@ -1,10 +1,10 @@
-#creado por sebastian alexis 
+#creado por sebastian alexis
 
 from django import forms
 from . import models
 
 class Doctor(forms.modelsForm):
-     run = forms.CharField(
+    run = forms.CharField(
         widget=forms.TextInput(
             attrs ={
                 'class': 'form-control'
@@ -12,9 +12,9 @@ class Doctor(forms.modelsForm):
         ),
         label='Run',
         required=True,
-        max_length=30
+        max_length=10
     )
-     nombre = forms.CharField(
+    nombre = forms.CharField(
         widget=forms.TextInput(
             attrs ={
                 'class': 'form-control'
@@ -24,7 +24,7 @@ class Doctor(forms.modelsForm):
         required=True,
         max_length=30
     )
-     apellido = forms.CharField(
+    apellido = forms.CharField(
         widget=forms.TextInput(
             attrs ={
                 'class': 'form-control'
@@ -34,28 +34,17 @@ class Doctor(forms.modelsForm):
         required=True,
         max_length=30
     )
-     genero = forms.CharField(
+    Telefono = forms.CharField(
         widget=forms.TextInput(
             attrs ={
                 'class': 'form-control'
             }
         ),
-        label='Genero',
+        label='Telefono',
         required=True,
-        max_length=30
+        max_length=12
     )
-     contrasena = forms.CharField(
-        widget=forms.TextInput(
-            attrs ={
-                'class': 'form-control'
-            }
-        ),
-        label='Titulo',
-        required=True,
-        type='passwoord',
-        max_length=30
-    )
-     correo = forms.CharField(
+    correo = forms.CharField(
         widget=forms.TextInput(
             attrs ={
                 'class': 'form-control'
@@ -63,7 +52,7 @@ class Doctor(forms.modelsForm):
         ),
         label='Correo',
         required=True,
-        max_length=30
+        max_length=45
     )
     direccion= forms.CharField(
         widget=forms.TextInput(
@@ -75,27 +64,17 @@ class Doctor(forms.modelsForm):
         required=True,
         max_length=30
     )
-     telefono = forms.CharField(
+    region = forms.CharField(
         widget=forms.TextInput(
-            attrs ={
+            attrs= {
                 'class': 'form-control'
             }
         ),
-        label='Telefono',
+        label='Comuna',
         required=True,
         max_length=30
     )
-     ciudad = forms.CharField(
-        widget=forms.TextInput(
-            attrs ={
-                'class': 'form-control'
-            }
-        ),
-        label='Ciudad',
-        required=True,
-        max_length=30
-    )
-     comuna = forms.CharField(
+    comuna = forms.CharField(
         widget=forms.TextInput(
             attrs ={
                 'class': 'form-control'
@@ -105,7 +84,7 @@ class Doctor(forms.modelsForm):
         required=True,
         max_length=30
     )
-     especialidad = forms.CharField(
+    especialidad = forms.CharField(
         widget=forms.TextInput(
             attrs ={
                 'class': 'form-control'
@@ -113,20 +92,19 @@ class Doctor(forms.modelsForm):
         ),
         label='Especialidad',
         required=True,
-        max_length=30
+        int(11)
     )
 
     class Meta:
         model =  Medico
         fields =('run',
-        'nombre','apellido','genero','contrasena',
-        'correo','direccion','telefono','ciudad',
+        'nombre','apellido','telefono',
+        'correo','direccion','region',
         'comuna','especialidad'
         )
 
-
-     class Paciente(forms.modelsForm):
-           run = forms.CharField(
+    class Paciente(forms.modelsForm):
+        run = forms.CharField(
         widget=forms.TextInput(
             attrs ={
                 'class': 'form-control'
