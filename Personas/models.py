@@ -50,3 +50,16 @@ class Hora_Medica(models.Model):
     idprevision = models.ForeignKey(detalleModelo.Prevision,on_delete = models.CASCADE)
     idestado = models.ForeignKey(detalleModelo.Estado,on_delete = models.CASCADE)
     idpersona = models.ForeignKey(Paciente,on_delete = models.CASCADE)
+
+#clase creada por osvaldo
+class administrativo(models.Model):
+    run = models.OneToOneField(Persona,on_delete = models.CASCADE)
+    nombre = models.CharField(max_length=30,blank=False,null=False)
+    apellido = models.CharField(max_length=30,blank=False,null=False)
+    genero = models.CharField(max_length=1,choices=generos)
+    contrasena = models.CharField(max_length=30,blank=False,null=False)
+    correo = models.CharField(max_length=30,blank=False,null=False)
+    direccion = models.CharField(max_length=30,blank=False,null=False)
+    telefono = models.CharField(max_length=30,blank=False,null=False)
+    ciudad = models.CharField(max_length=30,blank=False,null=False)
+    comuna = models.CharField(max_length=30,blank=False,null=False)

@@ -48,10 +48,12 @@ def Adm(request):
 def traerGenero():
     generos = Genero.objects.all()
     return generos
-    
+
+#creado por osvaldo    
 #modificado por oscar
 def inicio(request):
     return render(request,'personas/inicio.html')
+
 #modificado por oscar
 def personas(request):
     context = {
@@ -62,3 +64,5 @@ def personas(request):
 def login(request):
     return render(request,'personas/Login/vista_login.html')
 
+#creado por osvaldo 
+def informehora
