@@ -47,10 +47,9 @@ def traerGenero():
     generos = Genero.objects.all()
     return generos
 
-#creado por osvaldo    
 #modificado por oscar
 def inicio(request):
-    return render(request,'personas/inicio.html')
+    return render(request,'personas/home.html')
 
 #modificado por oscar
 def personas(request):
