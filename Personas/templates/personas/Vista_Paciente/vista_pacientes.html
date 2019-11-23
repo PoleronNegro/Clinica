@@ -40,12 +40,47 @@
             <br>
             <div class="col">
                 <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                <label for="">Seleccione su Genero: </label>
                 <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
                     {% for ge in genero %}
                     <option value="{{ ge.id }}">{{ ge.detalle }}</option>
                     {% endfor %}
                 </select>
             </div>
+            <br>
+            <div class="col">
+                <label for="">Ingrese su Direccion:</label>
+                <input type="text" class="form-control" id="colFormLabel" placeholder="Ingrese su Direccion aqui">
+            </div>
+            <br>            
+            <div class="col">
+                <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                <label for="">Seleccione su Comuna: </label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                    {% for ce in comuna %}
+                    <option value="{{ ge.id }}">{{ ce.detalle }}</option>
+                    {% endfor %}
+                </select>
+                <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                <label for="">Seleccione su provincia: </label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                    {% for po in provincia %}
+                    <option value="{{ ge.id }}">{{ po.detalle }}</option>
+                    {% endfor %}
+                </select>
+                <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                <label for="">Seleccione su Region: </label>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                    {% for re in region %}
+                    <option value="{{ ge.id }}">{{ re.detalle }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <br>
+            <div class="col">
+                <button type="button" class="btn btn-outline-primary">Ingresar</button>
+            </div>
+            
         </div>
 </form>
 {% endblock body %}
